@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mobinabinshun-beep/NU-PUBLIC-BULLETINS/blob/main/schemas/bulletin-record.schema.json",
+  "title": "N.U Public Bulletin Record",
+  "type": "object",
+  "required": ["id", "type", "title", "status", "summary", "created_at", "provenance", "listing_disclaimer"],
+  "properties": {
+    "id": {"type":"string","pattern":"^[a-z0-9][a-z0-9-]{2,80}$"},
+    "type": {"enum":["proposal","opportunity","reference","independent_work"]},
+    "title": {"type":"string","minLength":1,"maxLength":200},
+    "subtitle": {"type":"string","maxLength":300},
+    "status": {"type":"string"},
+    "summary": {"type":"string","maxLength":1200},
+    "url": {"type":"string","format":"uri"},
+    "creator_or_publisher": {"type":"string","maxLength":200},
+    "created_at": {"type":"string","format":"date"},
+    "updated_at": {"type":"string","format":"date"},
+    "source_date_or_version": {"type":"string","maxLength":100},
+    "headings": {"type":"array","items":{"type":"string","maxLength":200}},
+    "tags": {"type":"array","items":{"type":"string","maxLength":60}},
+    "provenance": {"type":"string","minLength":1,"maxLength":1000},
+    "evidence_refs": {"type":"array","items":{"type":"string"}},
+    "destination": {"type":"string","maxLength":500},
+    "rights_note": {"type":"string","maxLength":1000},
+    "listing_disclaimer": {"const":"Listing is not endorsement, canon approval, official status, or rights clearance."}
+  },
+  "additionalProperties": false
+}
