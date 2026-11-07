@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "system": "Niroo Universe",
   "repository": "NU-PUBLIC-BULLETINS",
   "visibility": "public",
@@ -7,9 +7,14 @@
     {"id":"future-development-proposals","path":"boards/future-development-proposals.md","record_type":"proposal"},
     {"id":"creator-opportunities","path":"boards/creator-opportunities.md","record_type":"opportunity"},
     {"id":"nu-public-references","path":"boards/nu-public-references.md","record_type":"reference"},
-    {"id":"independent-publications","path":"boards/independent-publications.md","record_type":"independent_work"}
+    {"id":"independent-publications","path":"boards/independent-publications.md","record_type":"independent_work"},
+    {"id":"public-keyword-index","path":"boards/public-keyword-index.md","record_type":"discovery_index"}
   ],
-  "policies": ["policies/listing-policy.md","policies/rights-and-attribution.md"],
+  "policies": [
+    "policies/listing-policy.md",
+    "policies/rights-and-attribution.md",
+    "policies/link-availability-and-reappearance.md"
+  ],
   "record_schema": "schemas/bulletin-record.schema.json",
   "related_repositories": {
     "gateway": "https://github.com/mobinabinshun-beep/NU-MASTER-GATEWAY",
